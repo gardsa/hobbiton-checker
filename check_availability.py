@@ -33,7 +33,8 @@ SENDER_PASSWORD = os.getenv('SENDER_PASSWORD', 'your-app-password')
 RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL', 'your-email@gmail.com')
 
 # Dates to check
-DATES_TO_CHECK = ['17-12-2025', '18-12-2025', '19-12-2025']  # December dates to monitor
+# DATES_TO_CHECK = ['17-12-2025', '18-12-2025', '19-12-2025']  # December dates to monitor
+DATES_TO_CHECK = ['19-11-2025']  # November dates to monitor
 
 # All Hobbiton tour categories to monitor
 TOUR_CATEGORIES = {
