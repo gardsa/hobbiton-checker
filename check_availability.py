@@ -268,7 +268,7 @@ def check_all_dates():
 
 def run_scheduler():
     """
-    Run the checker every hour
+    Run the checker every 30 minutes
     """
     import schedule
 
@@ -277,13 +277,13 @@ def run_scheduler():
     for cat, name in TOUR_CATEGORIES.items():
         logging.info(f"  - {cat}: {name}")
     logging.info(f"Monitoring dates: {', '.join(DATES_TO_CHECK)}")
-    logging.info("Checking every hour...")
+    logging.info("Checking every 30 minutes...")
 
     # Run immediately on start
     check_all_dates()
 
-    # Schedule to run every hour
-    schedule.every().hour.do(check_all_dates)
+    # Schedule to run every 30 minutes
+    schedule.every(30).minutes.do(check_all_dates)
 
     while True:
         schedule.run_pending()
